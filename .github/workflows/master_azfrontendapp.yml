@@ -55,7 +55,7 @@ jobs:
         with:
           app-name: 'azfrontendapp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_584E8E3708354220AFECB16C5FCCD01C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E82441797F294D32981562CB8D7E530D }}
           package: app.zip
       - name: Delete zip file
         run: rm app.zip
