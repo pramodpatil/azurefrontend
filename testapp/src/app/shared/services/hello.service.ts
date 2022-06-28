@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 })
 export class HelloService {
 
-  private apiUrl = environment.apiUrl; //  "http://localhost:3000/api"
+  private apiUrl = environment.apiUrl; //"http://localhost:3000/api"
   constructor(
     private httpClient: HttpClient
   ) { }
