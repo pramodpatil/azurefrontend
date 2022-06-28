@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apirl: 'https://aztestbackend.azurewebsites.net'
+  apiUrl: 'https://aztestbackend.azurewebsites.net'
 };
 
 /*
