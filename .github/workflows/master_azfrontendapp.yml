@@ -25,16 +25,16 @@ jobs:
         run: |
           npm install
           npm run build --prod
-        # working-directory: .
+        working-directory: .
       
-      - name: Zip all files for upload between jobs
-        run: zip --symlinks -r azurefrontend.zip ./*
+      #- name: Zip all files for upload between jobs
+       # run: zip --symlinks -r azurefrontend.zip ./*
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: azurefrontend
-          path: azurefrontend.zip
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
@@ -58,5 +58,5 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9EEB9881E04F43EF99CCCBE919F30A9C }}
           package: ./dist/azurefrontend
       
-      - name: Delete zip file
-        run: rm nest.zip
+      #- name: Delete zip file
+       # run: rm nest.zip
