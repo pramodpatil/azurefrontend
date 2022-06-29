@@ -47,13 +47,13 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:
-          name: azurefrontend
+          name: node-app
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'azurefrontend'
+          app-name: 'azfrontendapp'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9EEB9881E04F43EF99CCCBE919F30A9C }}
           package: ./dist/azurefrontend
